@@ -1,5 +1,5 @@
 body {
-    background-image: url('textura-madeira.jpg');
+    background-image: url(./Assets/imagens/textura-madeira.png);
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Lato', sans-serif;
@@ -33,15 +33,30 @@ header p {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    flex-wrap: wrap; /*Permite que os itens quebrem para a próxima linha */
     gap: 20px; /* Espaçamento entre os itens */
+}
+
+.menu-item img {
+    width: 100%; /* Largura da imagem */
+    max-width: 300px; /* Tamanho máximo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+    transition: transform 0.3s ease; /* Efeito de hover */
+}
+
+.menu-item img:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
 }
 
 .menu h2 {
     width: 100%; /* Títulos ocupam a largura total */
-    color: #8B4513; /* Terra queimada */
+    /* color: #8B4513; Terra queimada */
+    color: #ffffff;
     font-family: 'Playfair Display', serif;
-    border-bottom: 2px solid #8B4513;
+    border-bottom: 2px solid #ffffff;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -51,15 +66,29 @@ header p {
     border: 1px solid #A52A2A; /* Borda vermelha terrosa */
     border-radius: 10px;
     padding: 15px;
-    flex: 1 1 calc(33.333% - 40px); /* 3 colunas com espaçamento */
+    flex: 1  1 calc(33.333% - (2 * gap)); /* 3 colunas com espaçamento */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.menu-item h3 {
+/* .menu-item h3 {
     margin: 0 0 10px;
     font-size: 1.3em;
     color: #3E2723;
+} */
+
+.menu-item h3 {
+    display: flex; /* Usa flexbox para alinhar ícone e texto */
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre ícone e texto */
+    margin: 0 0 10px;
+    font-size: 1.3em;
+    color: #3E2723;
+}
+
+.menu-item h3 i {
+    font-size: 24px; /* Tamanho do ícone */
+    color: #8B4513; /* Cor do ícone */
 }
 
 .menu-item p {
